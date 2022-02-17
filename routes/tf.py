@@ -17,8 +17,6 @@ model = load_model('./models/weights/tf_iris.h5')
 
 # Prediction Function (usecase)
 async def ModelPrediction(data):
-    classNameCat = {0: 'Iris-setosa',
-                    1: 'Iris-versicolor', 2: 'Iris-virginica'}
     x = np.array([[data.a, data.b, data.c, data.d]])
 
     pred = model.predict(x)
